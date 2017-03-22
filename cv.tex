@@ -1,0 +1,378 @@
+% Geoff Boeing - Curriculum Vitae
+%
+% Copyright (C) 2017 Geoff Boeing
+% Email: gboeing@berkeley.edu
+% Web: http://geoffboeing.com/
+
+\documentclass[11pt,letterpaper]{report}
+
+% load packages
+\usepackage{hyperref} % enable hyperlinks
+\usepackage{geometry} % manually set page margins
+\usepackage{enumitem} % enumerate with [resume] option
+\usepackage{fontspec} % define custom fonts
+\usepackage{sectsty} % allow custom section fonts
+\usepackage[USenglish]{babel} % use american-style formatting
+\usepackage[autostyle]{csquotes} % enable enquoting
+\usepackage{datetime} % enable formatting of date output
+
+% define a default font face and set it as the body font
+\newcommand{\defaultfontface}{Minion Pro}
+\setmainfont{\defaultfontface}
+
+% set title font
+\newfontfamily\titleface{\defaultfontface}
+\newcommand{\titlefont}[1]{{\titleface\bfseries\Huge{#1}}}
+
+% set section and subsection heading fonts
+\newfontfamily\sectionface{\defaultfontface}
+\newfontfamily\subsectionface{\defaultfontface}
+\sectionfont{\sectionface\mdseries\large\bfseries\uppercase}
+\subsectionfont{\subsectionface\mdseries\normalsize\bfseries}
+
+% set page margins
+\geometry{
+  body={6.5in, 9.0in},
+  left=1.0in,
+  top=1.0in
+}
+
+% prevent paragraph indentation
+\setlength\parindent{0em}
+
+% make unordered lists without bullets and use compact spacing
+\renewenvironment{itemize}{
+  \begin{list}{}{
+      \setlength{\leftmargin}{1.75em}
+      \setlength{\itemsep}{0.25em}
+      \setlength{\parskip}{0em}
+      \setlength{\parsep}{0.25em}
+    }
+}{
+  \end{list}
+}
+
+% customize compact spacing of ordered lists
+\setlist[enumerate]{itemsep=0.25em, leftmargin=1.75em}
+
+% print the month and year only when using \today
+\newdateformat{monthyeardate}{\monthname[\THEMONTH] \THEYEAR}
+
+% define metadata for pdf properties
+\newcommand{\myname}{Geoff Boeing}
+\hypersetup{
+  colorlinks = true,
+  urlcolor = black,
+  pdfauthor = {\myname},
+  pdfkeywords = {urban planning, urban design, data science, complexity},
+  pdftitle = {\myname: Curriculum Vitae},
+  pdfsubject = {Curriculum Vitae},
+  pdfpagemode = UseNone
+}
+
+
+
+\begin{document}
+
+% display my name as the document title
+\titlefont{\myname}
+
+% contact info
+\vspace{1em}
+\begin{minipage}[t]{0.495\textwidth}
+  Department of City and Regional Planning \\
+  University of California, Berkeley \\
+  Berkeley, California 94720
+\end{minipage}
+\begin{minipage}[t]{0.495\textwidth}
+  Email: \href{mailto:gboeing@berkeley.edu}{gboeing@berkeley.edu} \\
+  Web: \href{http://geoffboeing.com/}{http://geoffboeing.com/} \\
+  Phone: +1-917-267-2297
+\end{minipage}
+\vspace{1em}
+
+
+
+\section*{Education}
+
+\subsection*{University of California, Berkeley}
+\begin{itemize}
+\item Ph.D. City and Regional Planning, 2017 (expected).   
+  \begin{itemize}
+  \item Dissertation: \enquote{Methods and Measures for Analyzing Complex Street Networks and Urban Form.}
+  \item Committee: Paul Waddell (chair), Robert Cervero, Elizabeth Macdonald, David O'Sullivan.
+  \end{itemize}  
+\end{itemize}
+  
+\subsection*{Arizona State University}
+\begin{itemize}
+\item M.S. Information Management, 2006.
+\item B.S. Computer Information Systems, 2004.  
+  \begin{itemize}
+  \item Graduated \emph{summa cum laude} from the Barrett Honors College.
+  \item Minor, Psychology.
+  \end{itemize}
+\end{itemize}
+
+
+
+\section*{Research and Teaching Interests}
+
+\begin{itemize}
+\item Urban planning and transportation-land use policy.
+\item Urban form, including history and theories of form/design and contemporary paradigms.
+\item Rental housing markets and affordability.
+\item Urban data science: computational statistics, data visualization, spatial analysis, Python, big data.
+\item Complex systems: complexity theories of cities, systems thinking, network analysis.
+\end{itemize}
+
+
+
+\section*{Publications}
+
+\subsection*{Peer-Reviewed Journal Articles}
+
+\begin{enumerate}
+
+\item Boeing, G. and P. Waddell. 2016. \enquote{New Insights into Rental Housing Markets across the United States: Web Scraping and Analyzing Craigslist Rental Listings.} \emph{Journal of Planning Education and Research}, published online before print.
+
+\item Boeing, G. 2016. \enquote{Honolulu Rail Transit: International Lessons from Barcelona in Linking Urban Form, Design, and Transportation.} \emph{Planext} 2, 28--47.
+
+\item Boeing, G. 2016. \enquote{Visual Analysis of Nonlinear Dynamical Systems: Chaos, Fractals, Self-Similarity, and the Limits of Prediction.} \emph{Systems} 4(4), 37.
+
+\item Boeing, G., D. Church, H. Hubbard, J. Mickens, and L. Rudis. 2014. \enquote{LEED-ND and Livability Revisited.} \emph{Berkeley Planning Journal} 27(1), 31--55.
+
+\end{enumerate}
+
+
+
+\subsection*{Journal Article Manuscripts Under Review}
+
+\begin{enumerate}[resume]
+
+\item Boeing, G. 2017. \enquote{The Effects of Inequality, Density, and Heterogeneous Residential Preferences on Urban Displacement and Metropolitan Structure: An Agent-Based Model.} Revise and resubmit at \emph{Journal of Artificial Societies and Social Simulation}.
+
+\item Boeing, G. 2017. \enquote{OSMnx: New Methods for Acquiring, Constructing, Analyzing, and Visualizing Complex Street Networks.} Revise and resubmit at \emph{Computers, Environment and Urban Systems}.
+
+\end{enumerate}
+
+
+
+\subsection*{Book Chapters and Other Articles}
+
+\begin{enumerate}[resume]
+
+\item Barajas, J.~M., G. Boeing, and J. Wartell. 2017. \enquote{Neighborhood Change, One Pint at a Time: The Impact of Local Characteristics on Craft Breweries.} In: \emph{Untapped: Exploring the Cultural Dimensions of Craft Beer}, edited by N.~G. Chapman, J.~S. Lellock, and C.~D. Lippard. Morgantown, WV: West Virginia University Press.
+
+\item Boeing, G. 2017. \enquote{Understanding Cities through Networks and Flows.} \emph{Berkeley Planning Journal} 28(1), 118--123.
+
+\item Boeing, G. 2016. \enquote{How Our Neighborhoods Lost Food, and How They Can Get It Back.} \emph{Progressive Planning} 206(Winter), 35--37.
+
+\end{enumerate}
+
+
+
+\subsection*{Patents}
+
+\begin{enumerate}[resume]
+
+\item Beck, A.~E., G. Boeing, and D. Shannon. 2014. \emph{Systems and Methods for Analyzing Requirements}. Patented in various jurisdictions as: United States patent US8650186B2, European patent EP2413256, Australian patent AU2011204935, Canadian patent CA2747481, and Chinese patent CN102346763.
+
+\end{enumerate}
+
+
+
+\subsection*{Manuscripts in Preparation}
+
+\begin{enumerate}[resume]
+
+\item Boeing, G. 2017. \enquote{Socio-demographic and Spatial Representation of Online Rental Listings: Evidence from Craigslist.}
+
+\item Boeing, G. 2017. \enquote{New Methods for Collecting and Analyzing Historical Online Rental Listings.}
+
+\item Boeing, G. 2017. \enquote{Comparative Visualization of Urban Form and Street Networks: Planning and Communication Tools for Urban Designers.}
+
+\item Boeing, G. 2017. \enquote{A Multi-Scale Analysis of 27,000 Urban Street Networks.}
+
+\item Boeing, G. 2017. \enquote{Methods for Measuring the Complexity of Urban Form and Design.}
+
+\item Nguyen, D. and G. Boeing. 2017. \enquote{Economic Trends in Craigslist's Online Market for Used Cars.}
+
+\end{enumerate}
+
+
+
+\section*{Conference Presentations}
+
+\begin{itemize}
+
+\item 2016. \enquote{Craigslist and U.S. Rental Housing Markets.} American Planning Association Annual Conference. Phoenix, Arizona.
+
+\item 2016. \enquote{Understanding Informal Rental Housing Markets through Public Data.} Association of American Geographers Annual Meeting. San Francisco, California.
+
+\item 2015. \enquote{Methods for Measuring the Aggregate Complexity Outcomes of Urban Design.} International Conference on Complex Systems. Tempe, Arizona.
+
+\item 2015. \enquote{Pedagogy of Urban Informatics.} College of Environmental Design Circus. Berkeley, California.
+
+\item 2014. \enquote{Web Scraping Urban Data: Lessons from the Lab and the Classroom.} American Collegiate Schools of Planning Annual Conference. Philadelphia, Pennsylvania.
+
+\item 2014. \enquote{LEED-ND and Perceptions of Livability.} College of Environmental Design Circus. Berkeley, California.
+
+\end{itemize}
+
+
+
+\section*{Invited Talks}
+
+\begin{itemize}
+
+\item 2017. \enquote{Scalable Methods for Acquiring, Analyzing, and Visualizing Urban Street Networks.} The Santa Fe Institute. Santa Fe, New Mexico.
+
+\item 2016. \enquote{Urban Data Science for Studying Housing Affordability and Urban Form.} NYU Center for Urban Science and Progress. Brooklyn, New York.
+
+\item 2016. \enquote{Smart Cities, Technology, and Representation: Prospects and Challenges.} Adobe Systems. San Jose, California.
+
+\end{itemize}
+
+
+
+\section*{Teaching Experience}
+
+\subsection*{University of California, Berkeley}
+
+\begin{itemize}
+\item Urban Informatics and Visualization, co-lead instructor (Fall 2013, Fall 2014, Fall 2015, Fall 2016).
+  \begin{itemize}	
+  \item Graduate-level data science course that teaches urban data analysis, computational statistics, visualization, and mapping using the Python programming language, open source analysis/visualization tools, and public data. Provides future city planners with a modern toolkit of technical skills for computational problem solving, reproducible research, policy analysis, and advocacy.
+  \end{itemize}
+\end{itemize}
+
+
+
+\section*{Service Positions}
+
+\subsection*{University of California, Berkeley}
+
+\begin{itemize}
+\item Ph.D. program faculty representative, 2015--2016.
+\item Book review editor, \emph{Berkeley Planning Journal}, 2013--2014.
+\end{itemize}
+
+
+\section*{Fellowships, Grants, and Awards}
+
+\begin{itemize}
+\item University of California Doctoral Completion Fellowship, 2016--2017.
+\item University of California Graduate Division Travel Grant, 2016.
+\item University of California Regents' Fellowship, 2012--2016.
+\item Kaye Bock Award for Best Journal Article, 2014.
+\item Accenture Inventor Innovation Award, 2010.
+\item Honeywell Scholarship Award, 2003--2004.
+\item Exxon Computer Information Systems Award, 2002--2003.
+\item Samuel and Lorraine Reich Endowed Scholarship, 2002--2003.
+\item Jerry Wistosky Memorial Scholarship, 2002--2003.
+\item Alumni Association L. William Seidman Scholarship, 2002--2003.
+\item AAL Scholarship Award, 2000--2004.
+\end{itemize}
+
+
+
+\section*{Professional Affiliations}
+
+\begin{itemize}
+\item Member, American Planning Association.
+\item Member, Association of American Geographers.
+\item Member, Complex Systems Society.
+\item Member, Association for Computing Machinery.
+\item Member, Project Management Institute.
+\end{itemize}
+
+
+
+\section*{Consulting Engagements}
+
+\begin{itemize}
+\item Calthorpe Associates, 2017--present.
+\item UrbanSim Inc., 2016--present.
+\item Raimi \& Associates, 2013.
+\item Avalon Health Economics, 2013--present.
+\item Accenture, 2009--2013.
+\end{itemize}
+
+
+
+\section*{Professional Experience}
+
+\subsection*{Unversity of California, Berkeley}
+
+\begin{itemize}
+\item Graduate Student Researcher and Instructor, 2013--2016.
+\item Led affordable housing research project in the Urban Analytics Lab, collecting and analyzing big data from Craigslist rental listings. Co-taught Urban Informatics and Visualization course. Lecturer at the UC Berkeley D-Lab.
+\end{itemize}
+
+\subsection*{Accenture}
+  
+\begin{itemize}
+\item Project Manager and Consultant, 2009--2013.
+\item Led an international development knowledge management project to re-engineer how livelihoods information and knowledge resources are shared across cultural and geographical boundaries. Researched and developed information discovery tools and databases, using semantic ontologies and natural language processing.
+\end{itemize}
+
+\subsection*{Permission Data}
+  
+\begin{itemize}
+\item Front-End Systems Product Manager, 2007--2009.
+\item Developed data brokering systems for large data sets. Led collaborative teams to gather requirements, design, and build front-end systems and web services.
+\end{itemize}
+
+\subsection*{Acumen, Inc.}
+  
+\begin{itemize}
+\item Web Systems Developer, 2004--2007.
+\item Enterprise information systems analysis, design, development, and support for a non-profit organization. Designed and built online enterprise systems, reporting systems, and back-end databases.
+\end{itemize}
+
+
+
+\section*{Skills and Methods}
+
+\subsection*{Statistical and Computational Methods}
+
+\begin{itemize}
+\item Multivariate statistics and various machine learning algorithms, systems analysis, data mining, data wrangling and ETL, Python (including numpy, scipy, pandas, matplotlib, statsmodels, networkx, and scikit-learn), web scraping, agent-based modeling and microsimulation (including UrbanSim, NetLogo, and Mesa), R, Java, .NET, PHP, HTML, MySQL, Postgres, and various other databases.
+\end{itemize}
+
+\subsection*{Geospatial Methods}
+
+\begin{itemize}
+\item GIS, spatial analysis, network analysis, QGIS, ArcGIS, PostGIS, geopandas, urban modeling and simulation, Leaflet, Mapbox.
+\end{itemize}
+
+\subsection*{Project Management}
+
+\begin{itemize}
+\item I am a credentialed Project Management Professional (PMP), and have managed projects and led various teams in academia, the public sector, and the private sector.
+\end{itemize}
+
+\subsection*{International Experience}
+
+\begin{itemize}
+\item I have previously worked professionally in the United States, the United Kingdom, Malawi, Mozambique, South Africa, Cambodia, and Thailand.
+\end{itemize}
+
+\subsection*{Security Clearance}
+
+\begin{itemize}
+\item U.S. Department of Defense: secret clearance.\\U.S. Department of Homeland Security: public trust.
+\end{itemize}
+
+
+% display today's date as MONTH YEAR after a vertical space below the end of the text
+\begin{center}
+\vspace{6em}
+%\vfill
+Updated \monthyeardate\today
+\end{center} 
+
+
+
+\end{document}

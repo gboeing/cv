@@ -1,5 +1,11 @@
+% Geoff Boeing - academiccv class
+%
+% Copyright (C) 2017 Geoff Boeing
+% Email: gboeing@berkeley.edu
+% Web: http://geoffboeing.com/
+
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{mycv}[2017/03/22 LaTeX class to make CV]
+\ProvidesClass{academiccv}[2017/03/22 LaTeX class to make an Academic CV]
 
 \LoadClass[12pt,letterpaper]{report}
 
@@ -19,11 +25,11 @@
 % set name font to title the document
 \newcommand{\namefont}[1]{{\normalfont\bfseries\Huge{#1}}}
 
-% set section heading fonts and format
+% set section heading fonts and before/after spacing
 \titleformat{\section}{\normalfont\bfseries\uppercase}{}{}{}{}
 \titlespacing{\section}{0pt}{24pt plus 4pt minus 2pt}{12pt plus 2pt minus 2pt}
 
-% set subsection heading fonts and format
+% set subsection heading fonts and before/after spacing
 \titleformat{\subsection}{\normalfont\bfseries}{}{}{}{}
 \titlespacing{\subsection}{0pt}{12pt plus 4pt minus 2pt}{8pt plus 2pt minus 2pt}
 

@@ -10,7 +10,7 @@
 \LoadClass[12pt,letterpaper]{report}
 
 \RequirePackage{tabto}
-\RequirePackage{hyperref} % enable hyperlinks
+\RequirePackage{hyperref} % enable hyperlinks and pdf metadata
 \RequirePackage{geometry} % manually set page margins
 \RequirePackage{enumitem} % enumerate with [resume] option
 \RequirePackage{fontspec} % define custom fonts
@@ -19,8 +19,14 @@
 \RequirePackage[autostyle]{csquotes} % enable enquoting
 \RequirePackage{datetime} % enable formatting of date output
 
+% what is your name?
+\newcommand{\myname}{Geoff Boeing}
+
 % define a default font face and set it as the body font
 \setmainfont{Minion Pro}
+
+% define how far to tab for list items with left-aligned date - different font faces need different widths
+\newcommand{\listtabwidth}{1.75cm}
 
 % set name font to title the document
 \newcommand{\namefont}[1]{{\normalfont\bfseries\Huge{#1}}}
@@ -43,8 +49,7 @@
 % prevent paragraph indentation
 \setlength\parindent{0em}
 
-% define tab width and space between list items
-\newcommand{\listtabwidth}{5em}
+% define space between list items
 \newcommand{\listitemspace}{0.2em}
 
 % make unordered lists without bullets and use compact spacing
@@ -73,8 +78,7 @@
 % print the month and year only when using \today
 \newdateformat{monthyeardate}{\monthname[\THEMONTH] \THEYEAR}
 
-% define metadata for pdf properties
-\newcommand{\myname}{Geoff Boeing}
+% define hyperlink appearance and metadata for pdf properties
 \hypersetup{
   colorlinks = true,
   urlcolor = black,

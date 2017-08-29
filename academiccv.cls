@@ -83,7 +83,7 @@
   colorlinks = true,
   urlcolor = black,
   pdfauthor = {\myname},
-  pdfkeywords = {urban planning, urban design, data science, complexity},
+  pdfkeywords = {urban planning, urban design, geospatial data science, street networks, housing, complexity},
   pdftitle = {\myname: Curriculum Vitae},
   pdfsubject = {Curriculum Vitae},
   pdfpagemode = UseNone

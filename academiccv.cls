@@ -1,11 +1,10 @@
 % Geoff Boeing - academiccv class
-%
-% Copyright (C) 2017 Geoff Boeing
+% Copyright (C) 2018 Geoff Boeing
 % Email: gboeing@berkeley.edu
 % Web: http://geoffboeing.com/
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{academiccv}[2017/03/22 LaTeX class to make an Academic CV]
+\ProvidesClass{academiccv}[2018/02/08 LaTeX class to make an Academic CV]
 
 \LoadClass[12pt,letterpaper]{report}
 
@@ -13,7 +12,7 @@
 \RequirePackage{hyperref} % enable hyperlinks and pdf metadata
 \RequirePackage{geometry} % manually set page margins
 \RequirePackage{enumitem} % enumerate with [resume] option
-\RequirePackage{fontspec} % define custom fonts
+%\RequirePackage{fontspec} % define custom fonts (doesn't work with PdfLatex)
 \RequirePackage{titlesec} % allow custom section fonts
 \RequirePackage[USenglish]{babel} % use american-style formatting
 \RequirePackage[autostyle]{csquotes} % enable enquoting
@@ -23,7 +22,8 @@
 \newcommand{\myname}{Geoff Boeing}
 
 % define a default font face and set it as the body font
-\setmainfont{Minion Pro}
+%\setmainfont{Cochineal} needs fontspec and XeLatex or LuaLatex
+\RequirePackage{Cochineal} % works with PdfLatex
 
 % define how far to tab for list items with left-aligned date - different font faces need different widths
 \newcommand{\listtabwidth}{1.75cm}

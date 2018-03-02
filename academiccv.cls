@@ -8,14 +8,17 @@
 
 \LoadClass[12pt,letterpaper]{report}
 
-\RequirePackage{tabto}
+\RequirePackage[T1]{fontenc} % output T1 font encoding (8-bit) so accented characters are a single glyph
+\RequirePackage[utf8]{inputenc} % allow input of utf-8 encoded characters
+\RequirePackage[strict,autostyle]{csquotes} % smart and nestable quote marks
+\RequirePackage[USenglish]{babel} % automatically regionalize hyphens, quote marks, etc
+\RequirePackage{microtype} % improves text appearance with kerning, etc
+\RequirePackage{datetime} % enable formatting of date output
+\RequirePackage{tabto} % make nice tabbing
 \RequirePackage{hyperref} % enable hyperlinks and pdf metadata
 \RequirePackage{geometry} % manually set page margins
 \RequirePackage{enumitem} % enumerate with [resume] option
 \RequirePackage{titlesec} % allow custom section fonts
-\RequirePackage[USenglish]{babel} % use american-style formatting
-\RequirePackage[autostyle]{csquotes} % enable enquoting
-\RequirePackage{datetime} % enable formatting of date output
 
 % what is your name?
 \newcommand{\myname}{Geoff Boeing}

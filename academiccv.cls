@@ -1,5 +1,5 @@
-% Geoff Boeing - academiccv class
-% Copyright (C) 2018 Geoff Boeing
+% Dr. Geoff Boeing - academiccv class
+% Copyright 2018 Geoff Boeing
 % Email: gboeing@berkeley.edu
 % Web: http://geoffboeing.com/
 

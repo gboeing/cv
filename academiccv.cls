@@ -24,7 +24,8 @@
 \newcommand{\myname}{Geoff Boeing}
 
 % define a default font face and set it as the body font
-\RequirePackage{crimson} % works with PdfLatex
+\RequirePackage{crimson} % document's serif font
+\RequirePackage{helvet}  % document's sans serif font
 
 % define how far to tab for list items with left-aligned date - different font faces need different widths
 \newcommand{\listtabwidth}{1.75cm}
@@ -33,11 +34,12 @@
 \newcommand{\namefont}[1]{{\normalfont\bfseries\Huge{#1}}}
 
 % set section heading fonts and before/after spacing
-\titleformat{\section}{\normalfont\bfseries\uppercase}{}{}{}{}
+\SetTracking{encoding=*}{50}
+\titleformat{\section}{\sffamily\small\bfseries\lsstyle\uppercase}{}{}{}{}
 \titlespacing{\section}{0pt}{24pt plus 4pt minus 2pt}{12pt plus 2pt minus 2pt}
 
 % set subsection heading fonts and before/after spacing
-\titleformat{\subsection}{\normalfont\bfseries}{}{}{}{}
+\titleformat{\subsection}{\sffamily\small\bfseries}{}{}{}{}
 \titlespacing{\subsection}{0pt}{12pt plus 4pt minus 2pt}{8pt plus 2pt minus 2pt}
 
 % set page margins

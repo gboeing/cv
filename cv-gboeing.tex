@@ -1,16 +1,15 @@
 %!TeX program = lualatex
-% Geoff Boeing - Curriculum Vitae
+% Geoff Boeing's Curriculum Vitae
 % Email: boeing@usc.edu
 % Web: https://geoffboeing.com/
 % Repo: https://github.com/gboeing/cv
 
 \documentclass[12pt,letterpaper]{report}
 
-\usepackage[T1]{fontenc} % output T1 font encoding (8-bit) so accented characters are a single glyph
+\usepackage[T1]{fontenc} % output T1 font encoding (8-bit) for accented characters as single glyph
 \usepackage[strict,autostyle]{csquotes} % smart and nestable quote marks
-\usepackage[USenglish]{babel} % automatically regionalize hyphens, quote marks, etc
-\usepackage[pro]{fontawesome5} % change pro -> regular if you don't own a pro license
-\usepackage{microtype}% improves text appearance with kerning, etc
+\usepackage[USenglish]{babel} % regionalize hyphens, quote marks, etc automatically
+\usepackage{microtype}% improve text appearance with kerning, etc
 \usepackage{datetime} % enable formatting of date output
 \usepackage{tabto}    % make nice tabbing
 \usepackage{hyperref} % enable hyperlinks and pdf metadata
@@ -19,29 +18,33 @@
 \usepackage{titlesec} % allow custom section fonts
 \usepackage{setspace} % custom line spacing
 
+% packages for contact info icons
+\usepackage[pro]{fontawesome5} % remove pro option if you don't own a pro license
+\usepackage{xcolor} % to color the icons gray
+
 % what is your name?
 \newcommand{\myname}{Geoff Boeing}
 
-% define a default font face and set it as the body font
-\usepackage{crimson} % document's serif font
-\setsansfont{TeX Gyre Heros}  % document's sans serif font
+% select default typefaces
+\usepackage{ebgaramond}      % document's serif typeface
+\setsansfont{TeX Gyre Heros} % document's sans serif typeface
 
-% define how far to tab for list items with left-aligned date - different font faces need different widths
+% how far to tab for list items with left-aligned date: different fonts need different widths
 \newcommand{\listtabwidth}{1.75cm}
 
-% set name font to title the document
+% define font to use as document's title
 \newcommand{\namefont}[1]{{\normalfont\bfseries\Huge{#1}}}
 
 % set section heading fonts and before/after spacing
-\SetTracking{encoding=*, family=\ssfamily}{50}
-\titleformat{\section}{\sffamily\small\bfseries\lsstyle\uppercase}{}{}{}{}
-\titlespacing{\section}{0pt}{24pt plus 4pt minus 2pt}{12pt plus 2pt minus 2pt}
+\SetTracking{encoding=*, family=\ssfamily}{30} % increase tracking for sans serif headings
+\titleformat{\section}{\lsstyle\sffamily\small\bfseries\uppercase}{}{}{}{}
+\titlespacing{\section}{0pt}{30pt plus 4pt minus 4pt}{8pt plus 2pt minus 2pt}
 
 % set subsection heading fonts and before/after spacing
-\titleformat{\subsection}{\sffamily\footnotesize\bfseries}{}{}{}{}
-\titlespacing{\subsection}{0pt}{12pt plus 4pt minus 2pt}{8pt plus 2pt minus 2pt}
+\titleformat{\subsection}{\lsstyle\sffamily\footnotesize\bfseries}{}{}{}{}
+\titlespacing{\subsection}{0pt}{16pt plus 4pt minus 4pt}{4pt plus 2pt minus 2pt}
 
-% set page margins
+% set page margins (assumes letter paper)
 \geometry{body={6.5in, 9.0in},
     left=1.0in,
     top=1.0in}
@@ -74,7 +77,7 @@
     parsep=\listitemspace,
     font=\normalfont}
 
-% print the month and year only when using \today
+% print only the month and year when using \today
 \newdateformat{monthyeardate}{\monthname[\THEMONTH] \THEYEAR}
 
 % define hyperlink appearance and metadata for pdf properties
@@ -91,29 +94,31 @@
 \begin{document}
     \raggedright
 
-    % display name as the document title
+    % display your name as the document title
     \namefont{\myname}
 
-    % contact info
+    % affiliation and contact info blocks
     \vspace{1em}
     \begin{minipage}[t]{0.50\textwidth}
+        % current primary affiliation, left-aligned
         Department of Urban Planning and Spatial Analysis \\
         Sol Price School of Public Policy \\
         University of Southern California
     \end{minipage}
     \begin{minipage}[t]{0.31\textwidth}
-        \flushright
-        \faIcon[light]{envelope} \\
-        \faIcon[light]{phone} \\
+        % contact info icons, right-aligned
+        \flushright~\color{darkgray}
+        \faIcon[light]{envelope}\\
+        \faIcon[light]{phone}\\
         \faIcon[light]{globe}
     \end{minipage}
-    \begin{minipage}[t]{0.17\textwidth}
+    \begin{minipage}[t]{0.18\textwidth}
+        % contact info details, right-aligned
         \flushright
         \href{mailto:boeing@usc.edu}{boeing@usc.edu} \\
         +1 213 740 2773 \\
         \href{https://geoffboeing.com}{geoffboeing.com}
     \end{minipage}
-    \vspace{0.5em}
 
 
     \section*{Education}
@@ -130,7 +135,7 @@
 
 
 
-    \section*{Academic Appointments}
+    \section*{Appointments}
 
     \begin{tablist}
 
@@ -154,9 +159,9 @@
 
     \begin{itemize}
 
-        \item Urban informatics and spatial data science: computational statistics, visualization, and spatial analysis
+        \item Urban informatics and geospatial data science: computational statistics, visualization, and spatial analysis
 
-        \item Transportation planning: access, equity, street network design, and urban form
+        \item Transportation planning: street network design, access, equity, and urban form
 
         \item Housing: emerging technology platforms' impacts on markets, residential mobility, and segregation
 
@@ -166,7 +171,7 @@
 
     \section*{Publications}
 
-    \subsection*{Articles in Peer-Reviewed Journals}
+    \subsection*{Journal Articles}
 
     \begin{tablist}
 
@@ -238,7 +243,7 @@
 
 
 
-    \subsection*{Conference Proceedings/Compendia}
+    \subsection*{Conference Proceedings}
 
     \begin{tablist}
 
@@ -268,7 +273,7 @@
 
 
 
-    \subsection*{Reports, Working Papers, and Other Publications}
+    \subsection*{Reports and Other Publications}
 
     \begin{tablist}
 
@@ -292,7 +297,7 @@
 
 
 
-    \subsection*{Manuscripts in Peer Review}
+    \subsection*{Manuscripts in Review}
 
     \begin{tablist}
 
@@ -405,7 +410,7 @@
 
     \section*{Conference Activity}
 
-    \subsection*{Plenary/Keynote Addresses}
+    \subsection*{Plenary Addresses}
 
     \begin{tablist}
 
@@ -459,7 +464,7 @@
 
     \begin{tablist}
 
-        \item[2021] \tab The Intersection of Smart Cities with Housing and Community Development. Hosted by \textit{Housing Policy Debate} and Virginia Tech. Online due to pandemic. Feb 15.
+        \item[2021] \tab The Intersection of Smart Cities with Housing and Community Development. Co-hosted by \textit{Housing Policy Debate} and Virginia Tech. Online. Feb 15.
 
         \item[2019] \tab Spatial Data Science Symposium: Setting the Spatial Data Science Agenda. Hosted by the University of California, Santa Barbara. Santa Barbara, California. Dec 9--11.
 
@@ -556,7 +561,7 @@
 
         \item[2020--21] \tab Race, Class, and the Production of and Exposure to Vehicular Pollution in Los Angeles (\$100,000). US Department of Transportation/Pacific Southwest Region University Transportation Center research grant. PI.
 
-        \item[2019] \tab Urban Form Impact: Humans, Environment, Equity (\$50,000). Tier 1 research grant. Co-PI with Sara Carr and Jana Cephas.
+        \item[2019] \tab Urban Form Impact: Humans, Environment, Equity (\$50,000). NU Tier 1 research grant. Co-PI with Sara Carr and Jay Cephas.
 
         \item[2019] \tab NU CSSH summer research matching grant (\$6,000). PI.
 
@@ -582,7 +587,7 @@
 
 
 
-    \section*{Teaching Experience}
+    \section*{Teaching}
 
     \subsection*{University of Southern California}
 
@@ -608,7 +613,7 @@
 
     \begin{itemize}
 
-        \item Urban Informatics and Visualization
+        \item Urban Informatics and Visualization (TA, co-lead instructor)
 
     \end{itemize}
 
@@ -807,37 +812,37 @@
 
 
 
-    \section*{Consulting Engagements}
+    \section*{Consulting}
 
     \begin{tablist}
 
-        \item[2017--19] \tab The Public Good Projects
+        \item[2017--19] \tab The Public Good Projects, New York, New York
 
-        \item[2017--18] \tab Calthorpe Analytics
+        \item[2017--18] \tab Calthorpe Analytics, Berkeley, California
 
-        \item[2016--18] \tab UrbanSim Inc.
+        \item[2016--18] \tab UrbanSim Inc., Berkeley, California
 
-        \item[2013--18] \tab Avalon Health Economics
+        \item[2013--18] \tab Avalon Health Economics, Morristown, New Jersey
 
-        \item[2013]     \tab Raimi \& Associates
+        \item[2013]     \tab Raimi \& Associates, Berkeley, California
 
-        \item[2009--13] \tab Accenture
+        \item[2010--11] \tab Voluntary Service Overseas, London, England
 
     \end{tablist}
 
 
 
-    \section*{Professional Experience}
+    \section*{Professional Employment}
 
     \begin{tablist}
 
-        \item[2009--13] \tab Accenture, Consultant and Project Manager\\
-                             London, England; New York, New York; San Diego, California
+        \item[2009--13] \tab Accenture\\Consultant and Project Manager\\
+                             New York, New York; London, England; San Diego, California
 
-        \item[2007--09] \tab Permission Data, Front-End Systems Product Manager\\
+        \item[2007--09] \tab Permission Data\\Front-End Systems Product Manager\\
                              New York, New York
 
-        \item[2004--07] \tab Acumen Inc., Web Systems Developer\\
+        \item[2004--07] \tab Acumen Inc.\\Web Systems Developer\\
                              Mesa, Arizona
 
     \end{tablist}

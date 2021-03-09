@@ -1,4 +1,4 @@
-%!TeX program = lualatex
+%!TeX program = pdflatex
 % Geoff Boeing's Curriculum Vitae
 % Email: boeing@usc.edu
 % Web: https://geoffboeing.com/
@@ -18,25 +18,21 @@
 \usepackage{titlesec} % allow custom section fonts
 \usepackage{setspace} % custom line spacing
 
-% packages for contact info icons
-\usepackage[pro]{fontawesome5} % remove pro option if you don't own a pro license
-\usepackage{xcolor} % to color the icons gray (needs pro above)
-
 % what is your name?
 \newcommand{\myname}{Geoff Boeing}
 
 % select default typefaces
-\usepackage{ebgaramond}      % document's serif typeface
-\setsansfont{TeX Gyre Heros} % document's sans serif typeface
+\usepackage{ebgaramond} % document's serif typeface
+\usepackage{helvet}     % document's sans serif typeface
 
 % how far to tab for list items with left-aligned date: different fonts need different widths
-\newcommand{\listtabwidth}{1.75cm}
+\newcommand{\listtabwidth}{1.7cm}
 
 % define font to use as document's title
 \newcommand{\namefont}[1]{{\normalfont\bfseries\Huge{#1}}}
 
 % set section heading fonts and before/after spacing
-\SetTracking{encoding=*, family=\ssfamily}{30} % increase tracking for sans serif headings
+\SetTracking{encoding=*, family=\sfdefault}{30} % increase sans serif headings tracking
 \titleformat{\section}{\lsstyle\sffamily\small\bfseries\uppercase}{}{}{}{}
 \titlespacing{\section}{0pt}{30pt plus 4pt minus 4pt}{8pt plus 2pt minus 2pt}
 
@@ -61,9 +57,9 @@
 % make unordered lists without bullets and use compact spacing
 \renewenvironment{itemize}
 {\begin{list}{}{\setlength{\leftmargin}{0em}
-            \setlength{\parskip}{0em}
-            \setlength{\itemsep}{\listitemspace}
-            \setlength{\parsep}{\listitemspace}}}
+                \setlength{\parskip}{0em}
+                \setlength{\itemsep}{\listitemspace}
+                \setlength{\parsep}{\listitemspace}}}
 {\end{list}}
 
 % make tabbed lists so content is left-aligned next to years
@@ -99,20 +95,13 @@
 
     % affiliation and contact info blocks
     \vspace{1em}
-    \begin{minipage}[t]{0.50\textwidth}
+    \begin{minipage}[t]{0.700\textwidth}
         % current primary affiliation, left-aligned
         Department of Urban Planning and Spatial Analysis \\
         Sol Price School of Public Policy \\
         University of Southern California
     \end{minipage}
-    \begin{minipage}[t]{0.31\textwidth}
-        % contact info icons, right-aligned
-        \flushright~\color{darkgray}
-        \faIcon[light]{envelope}\\
-        \faIcon[light]{phone}\\
-        \faIcon[light]{globe}
-    \end{minipage}
-    \begin{minipage}[t]{0.18\textwidth}
+    \begin{minipage}[t]{0.295\textwidth}
         % contact info details, right-aligned
         \flushright
         \href{mailto:boeing@usc.edu}{boeing@usc.edu} \\

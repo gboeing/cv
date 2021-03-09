@@ -18,7 +18,7 @@ jobs:
           root_file: cv-gboeing.tex
 
       - name: Release PDF
-        uses: marvinpinto/action-automatic-releases@v1.1.0
+        uses: marvinpinto/action-automatic-releases@latest
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           draft: false

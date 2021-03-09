@@ -1,0 +1,28 @@
+name: Build LaTeX document
+
+on:
+  push:
+    branches: [master]
+
+jobs:
+  build_latex:
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Checkout repo
+        uses: actions/checkout@v2
+
+      - name: Compile PDF
+        uses: xu-cheng/latex-action@v2
+        with:
+          root_file: cv-gboeing.tex
+
+      - name: Release PDF
+        uses: marvinpinto/action-automatic-releases@v1.1.0
+        with:
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          draft: false
+          prerelease: false
+          automatic_release_tag: latest
+          title: latest
+          files: cv-gboeing.pdf

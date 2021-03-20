@@ -17,12 +17,12 @@ jobs:
         with:
           root_file: cv-gboeing.tex
 
-      - name: Release PDF
-        uses: marvinpinto/action-automatic-releases@latest
+      - name: Publish PDF
+        uses: appleboy/scp-action@v0.1.4
         with:
-          repo_token: ${{ secrets.GITHUB_TOKEN }}
-          draft: false
-          prerelease: false
-          automatic_release_tag: latest
-          title: latest
-          files: cv-gboeing.pdf
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USERNAME }}
+          key: ${{ secrets.SSH_KEY }}
+          passphrase: ${{ secrets.SSH_KEY_PASSPHRASE }}
+          source: "cv-gboeing.pdf"
+          target: "~/public_html/share/cv-gboeing.pdf"

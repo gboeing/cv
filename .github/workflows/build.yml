@@ -26,3 +26,4 @@ jobs:
           passphrase: ${{ secrets.SSH_KEY_PASSPHRASE }}
           source: "cv-gboeing.pdf"
           target: "~/public_html/share/cv-gboeing.pdf"
+          use_insecure_cipher: true

@@ -24,7 +24,6 @@ jobs:
           username: ${{ secrets.SSH_USERNAME }}
           key: ${{ secrets.SSH_KEY }}
           passphrase: ${{ secrets.SSH_KEY_PASSPHRASE }}
-          fingerprint: ${{ secrets.SSH_FINGERPRINT }}
           source: "cv-gboeing.pdf"
           target: "~/public_html/share"
           use_insecure_cipher: true

@@ -2,7 +2,7 @@ name: Build LaTeX document
 
 on:
   push:
-    branches: [master]
+    branches: [main]
 
 jobs:
   build_latex:

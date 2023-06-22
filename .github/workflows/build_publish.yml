@@ -1,4 +1,4 @@
-name: Build LaTeX document
+name: Build and Publish PDF
 
 on:
   push:
@@ -12,7 +12,7 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v2
 
-      - name: Compile PDF
+      - name: Build PDF
         uses: xu-cheng/latex-action@v2
         with:
           root_file: cv-gboeing.tex

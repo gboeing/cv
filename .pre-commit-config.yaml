@@ -1,0 +1,20 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.4.0
+    hooks:
+      - id: check-added-large-files
+        args: [--maxkb=50]
+      - id: check-case-conflict
+      - id: check-merge-conflict
+        args: [--assume-in-merge]
+      - id: check-yaml
+      - id: detect-private-key
+      - id: end-of-file-fixer
+      - id: fix-byte-order-marker
+      - id: mixed-line-ending
+      - id: trailing-whitespace
+
+  - repo: https://github.com/meliache/pre-commit-chktex
+    rev: v0.2.2
+    hooks:
+      - id: chktex-system

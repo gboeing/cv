@@ -13,12 +13,12 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Build PDF
-        uses: xu-cheng/latex-action@v2
+        uses: xu-cheng/latex-action@v3
         with:
           root_file: cv-gboeing.tex
 
       - name: Publish PDF
-        uses: appleboy/scp-action@v0.1.4
+        uses: appleboy/scp-action@v0.1.6
         with:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USERNAME }}

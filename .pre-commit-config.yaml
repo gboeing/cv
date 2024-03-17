@@ -18,3 +18,4 @@ repos:
     rev: v0.2.2
     hooks:
       - id: chktex-system
+        args: [-eall, -n22, -n30]

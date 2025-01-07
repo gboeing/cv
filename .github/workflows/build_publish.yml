@@ -1,8 +1,7 @@
-%YAML 1.2
 ---
 name: Build and Publish PDF
 
-on:
+on:  # yamllint disable-line rule:truthy
   push:
     branches: [main]
   workflow_dispatch:

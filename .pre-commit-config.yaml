@@ -37,4 +37,4 @@ repos:
     rev: v0.2.2
     hooks:
       - id: chktex-system
-        args: [-eall, -n12, -n22, -n30]
+        args: [-H, -I, -n12]

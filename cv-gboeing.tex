@@ -1,29 +1,36 @@
-%!TeX program = pdflatex
+% !TeX program = pdflatex
 % Geoff Boeing's Curriculum Vitae
 % Email: boeing@usc.edu
 % Web: https://geoffboeing.com/
 % Repo: https://github.com/gboeing/cv
 
-\documentclass[11pt,letterpaper]{report}
+\RequirePackage[l2tabu,orthodox]{nag} % warn if using any obsolete commands
+\documentclass[11pt,letterpaper]{report} % document style
 
-\usepackage[T1]{fontenc} % output T1 font encoding (8-bit) for accented characters as single glyph
+% load encoding and font packages for pdflatex, in order
+\usepackage[T1]{fontenc}    % output 8-bit encoded fonts
+\usepackage[utf8]{inputenc} % allow input of utf-8 encoded characters
+\usepackage{ebgaramond}     % document's serif font
+\usepackage{tgheros}        % document's sans serif font
+
+% load babel, csquotes, and microtype in order
+\usepackage[USenglish]{babel} % auto-regionalize hyphens, quote marks, etc
 \usepackage[strict,autostyle]{csquotes} % smart and nestable quote marks
-\usepackage[USenglish]{babel} % regionalize hyphens, quote marks, etc automatically
-\usepackage{microtype}% improve text appearance with kerning, etc
+\usepackage[babel=true]{microtype} % enable micro-typographic adjustments
+
+% load everything else
 \usepackage{datetime} % enable formatting of date output
-\usepackage{tabto}    % make nice tabbing
-\usepackage{setspace} % custom line spacing
-\usepackage{hyperref} % enable hyperlinks and pdf metadata
-\usepackage{geometry} % manually set page margins
 \usepackage{enumitem} % enumerate with [resume] option
+\usepackage{geometry} % manually set page margins
+\usepackage{setspace} % custom line spacing
+\usepackage{tabto}    % make nice tabbing
 \usepackage{titlesec} % allow custom section fonts
+
+% load hyperref last for compatibility
+\usepackage{hyperref} % enable hyperlinks and pdf metadata
 
 % what is your name?
 \newcommand{\myname}{Geoff Boeing}
-
-% select default typefaces
-\usepackage{ebgaramond} % document's serif typeface
-\usepackage{tgheros}    % document's sans serif typeface
 
 % how far to tab for list items with left-aligned date: different fonts need different widths
 \newcommand{\listtabwidth}{1.7cm}
@@ -32,7 +39,7 @@
 \newcommand{\namefont}[1]{{\normalfont\bfseries\Huge{#1}}}
 
 % set section heading fonts and before/after spacing
-\SetTracking{encoding=*, family=\sfdefault}{30} % increase sans serif headings tracking
+\SetTracking{encoding=*, family=\sfdefault}{30} % increase heading font tracking
 \titleformat{\section}{\lsstyle\sffamily\small\bfseries\uppercase}{}{}{}{}
 \titlespacing{\section}{0pt}{30pt plus 4pt minus 4pt}{8pt plus 2pt minus 2pt}
 
@@ -105,7 +112,7 @@
     \end{minipage}
     \begin{minipage}[t]{0.295\textwidth}
         % contact info details, right-aligned
-        \flushright{}
+        \raggedleft{}
         \href{mailto:boeing@usc.edu}{boeing@usc.edu} \\
         +1 213 740 2773 \\
         \href{https://geoffboeing.com}{geoffboeing.com}

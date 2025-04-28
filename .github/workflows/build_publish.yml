@@ -20,7 +20,7 @@ jobs:
           root_file: cv-gboeing.tex
 
       - name: Publish PDF
-        uses: appleboy/scp-action@v1.0.0
+        uses: appleboy/scp-action@v1
         with:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USERNAME }}

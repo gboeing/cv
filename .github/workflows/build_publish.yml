@@ -6,13 +6,11 @@ on:  # yamllint disable-line rule:truthy
     branches: [main, s3]
   workflow_dispatch:
 
-permissions:
-  id-token: write
-  contents: read
-
 jobs:
   build_latex:
     runs-on: ubuntu-latest
+    permissions:
+      id-token: write
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
@@ -21,7 +19,6 @@ jobs:
         uses: aws-actions/configure-aws-credentials@v4
         with:
           role-to-assume: arn:aws:iam::800820568312:role/github-actions-gboeing-cv
-          role-session-name: github-actions-gboeing-cv
           aws-region: us-west-2
 
       - name: Build PDF
@@ -29,5 +26,5 @@ jobs:
         with:
           root_file: cv-gboeing.tex
 
-      - name: Upload PDF to S3
+      - name: Upload PDF to s3
         run: aws s3 cp ./cv-gboeing.pdf s3://cv-gboeing/

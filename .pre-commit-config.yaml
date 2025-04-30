@@ -30,6 +30,7 @@ repos:
           - --strict
           - >
             -d={extends: default, rules: {
+            line-length: {max: 90},
             quoted-strings: {quote-type: single,
                              required: only-when-needed}}}
 

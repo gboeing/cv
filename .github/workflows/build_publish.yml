@@ -3,7 +3,7 @@ name: Build and Publish PDF
 
 on:  # yamllint disable-line rule:truthy
   push:
-    branches: [main, s3]
+    branches: [main]
   workflow_dispatch:
 
 jobs:

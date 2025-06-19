@@ -15,16 +15,16 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
 
+      - name: Build PDF
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: cv-gboeing.tex
+
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v4
         with:
           role-to-assume: arn:aws:iam::800820568312:role/github-actions-gboeing-cv
           aws-region: us-west-2
 
-      - name: Build PDF
-        uses: xu-cheng/latex-action@v3
-        with:
-          root_file: cv-gboeing.tex
-
-      - name: Upload PDF to s3
+      - name: Upload PDF to AWS s3
         run: aws s3 cp ./cv-gboeing.pdf s3://cv-gboeing/

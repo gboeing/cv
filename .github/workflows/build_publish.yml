@@ -16,7 +16,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Build PDF
-        uses: xu-cheng/latex-action@v3
+        uses: xu-cheng/latex-action@v4
         with:
           root_file: cv-gboeing.tex
 

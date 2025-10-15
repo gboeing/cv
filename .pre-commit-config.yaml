@@ -1,7 +1,7 @@
 ---
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v5.0.0
+    rev: v6.0.0
     hooks:
       - id: check-added-large-files
         args: [--maxkb=50]
@@ -23,7 +23,7 @@ repos:
       - id: remove-tabs
 
   - repo: https://github.com/adrienverge/yamllint
-    rev: v1.37.0
+    rev: v1.37.1
     hooks:
       - id: yamllint
         args:

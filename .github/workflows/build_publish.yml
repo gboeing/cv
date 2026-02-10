@@ -20,6 +20,13 @@ jobs:
         with:
           root_file: cv-gboeing.tex
 
+      - name: Compress PDF
+        run: |
+          mv cv-gboeing.pdf temp.pdf
+          gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.7 \
+             -dPDFSETTINGS=/screen -dNOPAUSE -dQUIET -dBATCH \
+             -dPrinted=false -sOutputFile=cv-gboeing.pdf temp.pdf
+
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v5
         with:

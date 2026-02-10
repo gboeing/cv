@@ -22,7 +22,7 @@ jobs:
 
       - name: Compress PDF
         run: >
-          docker run -v "$PWD:/workdir" --rm -it ptspts/pdfsizeopt
+          docker run --rm -v "$PWD:/workdir" ptspts/pdfsizeopt
           pdfsizeopt cv-gboeing.pdf cv-gboeing.pdf
 
       - name: Configure AWS credentials

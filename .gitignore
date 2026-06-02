@@ -1,6 +1,7 @@
-secrets.txt
-.DS_Store
+*.code-workspace
 *.pdf
+.DS_Store
+secrets.txt
 
 ## Core latex/pdflatex auxiliary files:
 *.aux

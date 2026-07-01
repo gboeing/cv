@@ -17,11 +17,6 @@ repos:
       - id: mixed-line-ending
       - id: trailing-whitespace
 
-  - repo: https://github.com/Lucas-C/pre-commit-hooks
-    rev: v1.5.6
-    hooks:
-      - id: remove-tabs
-
   - repo: https://github.com/adrienverge/yamllint
     rev: v1.38.0
     hooks:
@@ -33,6 +28,17 @@ repos:
             line-length: {max: 90},
             quoted-strings: {quote-type: single,
                              required: only-when-needed}}}
+
+  - repo: https://github.com/Lucas-C/pre-commit-hooks
+    rev: v1.5.6
+    hooks:
+      - id: remove-tabs
+
+  - repo: https://github.com/WGUNDERWOOD/tex-fmt
+    rev: v0.5.7
+    hooks:
+      - id: tex-fmt
+        args: [-f, -n, -r, -v, --format-tables]
 
   - repo: https://github.com/meliache/pre-commit-chktex
     rev: v0.2.2
